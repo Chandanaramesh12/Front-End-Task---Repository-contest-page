@@ -1,0 +1,285 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 100px;
+    padding: 20px;
+    height: 1000px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cb5bb4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: underline;
+    color: #cb5bb4;
+}
+
+/* Authentication Buttons */
+.auth button {
+    background-color: black;
+    color: #fae1dd;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #fae1dd;
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    font-family: cursive;
+    flex-wrap: wrap;
+}
+
+/* Hero Image */
+.hero img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Main Content Layout */
+.container {
+    display: flex;
+    justify-content: flex-start; /* Aligns content beside filters */
+    align-items: flex-start;
+    gap: 30px; /* Space between filter and content */
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Filter Section */
+.filters-section {
+    display: flex;
+    flex-direction: column;
+    background: #6d8c74;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid black;
+    width: 250px; /* Fixed width */
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Filter Options */
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Recipe Section */
+/* Centering the Entire Recipe Section */
+/* Centering the Entire Recipe Section & Moving It Up */
+/* Recipe Section - Centered & Moved Up */
+.recipe-section {
+    flex-grow: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center search bar and recipes */
+}
+
+/* Centering Search Bar & Sorting Options */
+.search-sort {
+    display: flex;
+    justify-content: center; /* Centered */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Recipe Grid - Proper 3 Per Row with No Overlap */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 per row */
+    gap: 50px;
+    justify-content: space-evenly;
+    align-items: stretch;
+    max-width: 1000px;
+    justify-items:center ;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 330px;
+    border: 2px solid #f5c6aa;
+    width: 80%;
+    max-width: 250px; /* Uniform size */
+    margin: 0 auto;
+}
+
+/* Images inside Recipe Cards */
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Responsive: Adjust for Smaller Screens */
+/* @media (max-width: 1024px) {
+    .recipe-grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 2 per row */
+    /* }
+} */
+
+/* @media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 1 per row */
+    /* }
+}  */
+
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .filters-section {
+        width: 100%;
+        text-align: center;
+    }
+    .recipe-grid {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Recipe Cards */
+/* .recipe-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #f5c6aa;
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive Design */
+/* Tablet View (2 per row) */
+/* @media (max-width: 900px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 80%;
+    }
+
+    .filters-section {
+        width: 100%;
+        text-align: center;
+    }
+} */
+
+/* Mobile View (1 per row) */
+/* @media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .search-sort {
+        flex-direction: column;
+    }
+
+    .recipe-card {
+        width: 100%;
+    }
+}  */
+
+.content-section{
+   align-self: auto;
+   align-items: self-end;
+   display: grid;
+   justify-content: right;
+   align-items: end;
+   align-content: flex-end;
+
+    
+}
+a{
+    text-decoration: none;
+}
+.recipe-grid{
+    position: absolute;
+    bottom: -330px;
+    right: 150px;
+}

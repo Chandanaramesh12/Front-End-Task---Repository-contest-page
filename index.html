@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodima - Recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Foodima</div>
+            <ul>
+                <li><a href="https://foodima.org/"  style="text-decoration: none;">Shop</a></li>
+                <li><a href="https://foodima.org/about/"  style="text-decoration: none;">Features</a></li>
+                <li><a href="#" class="active"  style="text-decoration: none;">Recipes</a></li>
+                <li><a href="#" style="text-decoration: none;">Hotline</a></li>
+            </ul>
+            <div class="auth">
+                <a href="#">Log in</a>
+                <button onclick="window.location.href='signup.html'">Sign up</button>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Recipe Contest</h1>
+            <p>Recipe contests are like our big, <br>constantly-in-progress dinner party—and you're invited.</p>
+            <a href="#">How they work →</a>
+        </div>
+        <div class="image-container">
+            <img src="contest.png" alt="Chef Illustration">
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="filter-section">
+            <h3>Filter by:</h3>
+            <div class="filter-group">
+                <label><input type="checkbox" class="filter" value="Contest Winners"> Contest Winners</label><br>
+                <label><input type="checkbox" class="filter" value="Featured"> Featured</label><br>
+                <label><input type="checkbox" class="filter" value="Test Kitchen-Approved"> Test Kitchen-Approved</label>
+            </div>
+        </div>
+        
+        <!-- <div class="filter-section">
+            <h3>Meals:</h3>
+            <div class="ilter-group">
+                <label><input type="checkbox" class="filter" value="Breakfast"> Breakfast</label><br>
+                <label><input type="checkbox" class="filter" value="Lunch"> Lunch</label><br>
+                <label><input type="checkbox" class="filter" value="Dinner"> Dinner</label><br>
+                <label><input type="checkbox" class="filter" value="Desserts"> Desserts</label>
+            </div>
+        </div> -->
+
+
+        
+        <div class="content-section">
+            <div class="search-sort">
+                <input type="text" id="searchBar" placeholder="Search recipes and more..." style="padding: 10px 200px;">
+                
+                <select id="sortOptions">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            
+                <select id="sortRatings">
+                    <option value="highest">Highest Rated</option>
+                    <option value="lowest">Lowest Rated</option>
+                </select>
+            </div>
+
+
+            <div class="recipe-grid">
+                <div class="recipe-card" data-category="Contest Winners" data-date="2024-02-15" data-rating="4.5">
+                    <img src="raspberry.jpg" alt="Raspberry-Raspberry Shortcakes" height="100px" width="1000px">
+                    <h3>Raspberry-Raspberry Shortcakes</h3>
+                    <p style="position: relative;bottom:10px;">by SARAH JAFFEL</p>
+                    <div style="position: absolute;bottom: 4px;left: 440px;">
+                        <i class="fa-solid fa-star"></i>4.7(23)
+
+                    </div>
+         
+                </div>
+                <div class="recipe-card" data-category="Featured" data-date="2023-02-15" data-rating="5">
+                    <img src="david.png" alt="David Lebovitz's Cherry Clafoutis">
+                    <h3>David Lebovitz's Cherry Clafoutis</h3>
+                    <p>by DAVID LEBOVITZ</p>
+                    <i class="fa-solid fa-star"></i>4.7(23)
+                </div>
+                <div class="recipe-card" data-category="Test Kitchen-Approved" data-date="2024-12-15" data-rating="4.1">
+                    <img src="chica.png" alt="Chicharrones-Encrusted Avocado">
+                    <h3>Chicharrones-Encrusted Avocado</h3>
+                    <p>by MISS APPETIT</p>
+                    <i class="fa-solid fa-star"></i>4.7(23)
+                </div>
+
+ 
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
